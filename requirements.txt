@@ -1,0 +1,13 @@
+numpy
+pandas
+matplotlib
+librosa
+torch
+torchaudio
+transformers
+datasets
+huggingface-hub
+soundfile
+tqdm
+scipy
+accelerate

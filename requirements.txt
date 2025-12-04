@@ -4,6 +4,7 @@ matplotlib
 librosa
 torch
 torchaudio
+torchcodec
 transformers
 datasets
 huggingface-hub
@@ -11,3 +12,6 @@ soundfile
 tqdm
 scipy
 accelerate
+evaluate
+peft
+

@@ -11,6 +11,18 @@ If you want to see this model being used in a live transcription project, please
 - **Districts covered (Andhra Pradesh):** Anantpur, Annamaya, Chittoor, Guntur, Krishna, SriSatyaSai, Srikakulam, Vishakapattanam (see [whisper-small-training/Vaani_IISC_dataset_download_onto_cache.ipynb](whisper-small-training/Vaani_IISC_dataset_download_onto_cache.ipynb))
 - **Text cleanup / normalization:** light editing was applied to reduce transcription noise and remove English tokens/characters (see `normalize_hindi(...)` in [whisper-small-training/whisper_training.ipynb](whisper-small-training/whisper_training.ipynb))
 
+## Evaluation (WER / CER)
+
+Baseline (**openai/whisper-small**):
+- WER: ~73.5
+- CER: ~55.5
+
+Best LoRA checkpoint (lowest WER across eval logs):
+- Checkpoint: [whisper-small-lora-ap-3/checkpoint-10400/](whisper-small-lora-ap-3/checkpoint-10400/)
+- Step: `10000`
+- WER: `59.02668759811617`
+- CER: `39.00761940159821`
+
 ## LoRA fine-tuning setup (key params)
 
 Source of truth: [whisper-small-training/whisper_training.ipynb](whisper-small-training/whisper_training.ipynb)
@@ -60,7 +72,6 @@ Source of truth: [whisper-small-training/whisper_training.ipynb](whisper-small-t
 
 ### Post-training artifacts
 - Merged model outputs: [whisper-small-merged-final/](whisper-small-merged-final/) (see merge notebook: [whisper-small-training/merged_model.ipynb](whisper-small-training/merged_model.ipynb))
-
 
 ## Final CT2 model
 - Final CT2 model folder: [whisper-small-ct2-final/](whisper-small-ct2-final/)
